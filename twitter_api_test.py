@@ -13,16 +13,14 @@ auth = tweepy.OAuthHandler(api_key, api_key_secret)
 auth.set_access_token(access_token, access_tokent_secret)
 api = tweepy.API(auth)
 
-# authenticate using 0Auth
-
-# create a list of hashtags of interest
-# lst_hashtags = ["#Resolution2020","#VoiceForThePlanet","#EcoFriendly","#ZeroWaste","#ClimateEmergency"]
+# create five variables, one for each hashtag of interest
 lst_hashtags_res = "#Resolution2020"
 lst_hashtags_voi = "#VoiceForThePlanet"
 lst_hashtags_eco = "#EcoFriendly"
 lst_hashtags_zer = "#ZeroWaste"
 lst_hashtags_cli = "#ClimateEmergency"
 
+# set the number of tweets you wish to pull from each hashtag. The resulting dataframe will contain this number of records *5
 max_tweets = 100
 
 # create variables that return the number of tweets specified in max_tweets, per hashtag
